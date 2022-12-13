@@ -10,9 +10,6 @@ def load_data(img_path,train = True):
     img = Image.open(img_path).convert('RGB')
     gt_file = h5py.File(gt_path)
     target = np.asarray(gt_file['density'])
-    print(target)
-    print(target.shape)
-    print(target.shape[1]/8)
     if False:
         crop_size = (img.size[0]/2,img.size[1]/2)
         if random.randint(0,9)<= -1:
